@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Gravity Cinematic - Neon Rush</title>
+  <title>Neon Leap - Gravity Cinematic</title>
   <style>
     * {
       box-sizing: border-box;
@@ -148,18 +148,18 @@
 
   <!-- Start Screen -->
   <div id="start-screen" class="screen-overlay">
-    <h1>GRAVITY CINEMATIC</h1>
-    <p class="subtitle">عالم سيبراني واقعي مذهل بمشاهد سينمائية، تحكم بلمسة واحدة أو بمسافة (Space) لعكس الجاذبية وخلق رقم قياسي مدمّن!</p>
-    <button class="btn" onclick="startGame()">ابتدأ التحدي الآن</button>
+    <h1>NEON LEAP</h1>
+    <p class="subtitle">An immersive cyber world with cinematic visuals. Use one-touch or Space key to flip gravity and set an addictive high score!</p>
+    <button class="btn" onclick="startGame()">Start Challenge</button>
   </div>
 
   <!-- Game Over Screen -->
   <div id="gameover-screen" class="screen-overlay hidden">
-    <h1 style="background: linear-gradient(45deg, #ff0055, #ffaa00); -webkit-background-clip: text;">انتهت الرحلة</h1>
-    <p class="subtitle" id="final-score">النتيجة: 0</p>
-    <p class="subtitle" id="high-score" style="color: #00f5d4; margin-top:-25px;">أعلى نتيجة: 0</p>
+    <h1 style="background: linear-gradient(45deg, #ff0055, #ffaa00); -webkit-background-clip: text;">Journey Over</h1>
+    <p class="subtitle" id="final-score">Score: 0</p>
+    <p class="subtitle" id="high-score" style="color: #00f5d4; margin-top:-25px;">High Score: 0</p>
     <div>
-      <button class="btn" onclick="startGame()">العب مرة أخرى 🔄</button>
+      <button class="btn" onclick="startGame()">Play Again 🔄</button>
     </div>
   </div>
 </div>
@@ -571,8 +571,8 @@ function triggerGameOver() {
     localStorage.setItem('gc_highscore', highScore);
   }
 
-  document.getElementById('final-score').innerText = `النتيجة: ${score}`;
-  document.getElementById('high-score').innerText = `أعلى نتيجة: ${highScore}`;
+  document.getElementById('final-score').innerText = `Score: ${score}`;
+  document.getElementById('high-score').innerText = `High Score: ${highScore}`;
   document.getElementById('gameover-screen').classList.remove('hidden');
 }
 
